@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La Fiamma — Піцерія</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand logo" href="index.html">🔥 La Fiamma</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Головна</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Меню</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Контакти</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="nav-link btn-order" href="menu.html">Замовити</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-7" data-aos="fade-right">
+        <h1 class="hero-title">Смак<br/><em>справжнього</em><br/>вогню</h1>
+        <p class="hero-sub">Готуємо у дровʼяній печі при 485°C.<br/>Тісто дозріває 72 години. Жодних компромісів.</p>
+        <div class="hero-btns">
+          <a href="menu.html" class="btn btn-flame me-3">Переглянути меню</a>
+          <a href="contact.html" class="btn btn-ghost">Знайти нас</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">24+</span><span class="stat-label">Видів піци</span></div>
+          <div class="stat"><span class="stat-num">8</span><span class="stat-label">Років традицій</span></div>
+          <div class="stat"><span class="stat-num">★ 4.9</span><span class="stat-label">Рейтинг</span></div>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-flex justify-content-center" data-aos="fade-left">
+        <div class="pizza-showcase">
+          <div class="pizza-ring ring1"></div>
+          <div class="pizza-ring ring2"></div>
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&auto=format&fit=crop" class="hero-pizza-img" alt="Свіжа піца">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span></span>
+  </div>
+</section>
+
+<section class="features-section py-6">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <p class="section-label">Чому ми?</p>
+      <h2 class="section-title">Різниця у деталях</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card">
+          <div class="feature-icon">🔥</div>
+          <h3>Дровʼяна піч</h3>
+          <p>Наша піч привезена з Неаполя. 485°C і тільки дрова — ніякого газу.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="feature-card feature-card--accent">
+          <div class="feature-icon">🌾</div>
+          <h3>Тісто 72 години</h3>
+          <p>Повільна ферментація робить тісто легким, ароматним і хрустким на краях.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-card">
+          <div class="feature-icon">🍅</div>
+          <h3>Імпортна сировина</h3>
+          <p>Томати San Marzano, моцарела DOP, оливкова олія Extra Virgin з Сицилії.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bestsellers-section py-6">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <p class="section-label">Топ вибір</p>
+      <h2 class="section-title">Хіти тижня</h2>
+    </div>
+    <div class="row g-4" id="bestsellers-row">
+      </div>
+    <div class="text-center mt-5">
+      <a href="menu.html" class="btn btn-flame">Все меню →</a>
+    </div>
+  </div>
+</section>
+
+<section class="story-section py-6">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="story-img-wrap">
+          <div class="story-img-block"></div>
+          <div class="story-badge">з 2016 року</div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <p class="section-label">Наша історія</p>
+        <h2 class="section-title">Піца як мистецтво</h2>
+        <p class="story-text">Все починалось у маленькій кухні Андрія, який навчався у неаполітанського пітцайоло три роки. Сьогодні La Fiamma — це місце, де кожна піца є ручною роботою.</p>
+        <p class="story-text">Ми не використовуємо заморожених інгредієнтів. Тісто готується щодня. Соус — лише із сезонних томатів.</p>
+        <a href="contact.html" class="btn btn-flame mt-3">Відвідати нас</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section py-6">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <p class="section-label">Відгуки</p>
+      <h2 class="section-title">Що кажуть гості</h2>
+    </div>
+    <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="review-card mx-auto">
+            <p class="review-text">"Найкраща піца у Львові, без перебільшень. Тісто тонке, але не крихке. Буду повертатися щотижня!"</p>
+            <div class="review-author">— Марія К., Львів</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="review-card mx-auto">
+            <p class="review-text">"Нарешті знайшов піцу, яка нагадує справжню Неаполітанську. Маргарита — шедевр простоти."</p>
+            <div class="review-author">— Олексій Р., Київ</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="review-card mx-auto">
+            <p class="review-text">"Привітний персонал, затишна атмосфера. Замовляли на компанію 8 людей — всі були в захваті!"</p>
+            <div class="review-author">— Катерина В., Львів</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+        <span class="carousel-arrow">‹</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+        <span class="carousel-arrow">›</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="cart-widget" id="cartWidget">
+  <button class="cart-btn" id="cartToggle">
+    🛒 <span id="cartCount">0</span>
+  </button>
+</div>
+
+<div class="modal fade" id="cartModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content cart-modal-content">
+      <div class="modal-header cart-modal-header">
+        <h5 class="modal-title">🛒 Ваше замовлення</h5>
+        <button type="button" class="btn-close-custom" data-bs-dismiss="modal">✕</button>
+      </div>
+      <div class="modal-body">
+        
+        <div id="cartBody">
+          <p class="cart-empty">Кошик порожній</p>
+        </div>
+        
+        <div id="checkoutFormBlock" class="d-none mt-4 pt-4" style="border-top: 1px solid rgba(255,255,255,0.08);">
+          <h6 class="mb-3" style="color: var(--gold); font-family: 'Montserrat', sans-serif;">Дані для доставки:</h6>
+          <form id="checkoutForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control-dark w-100 p-2 rounded" id="clientName" placeholder="Ваше ім'я">
+              </div>
+              <div class="col-md-6 position-relative">
+                <input type="tel" class="form-control-dark w-100 p-2 rounded" id="clientPhone" placeholder="Телефон (обов'язково) *" required>
+                <div class="invalid-feedback d-none" id="phoneError" style="color: #ff6b6b; font-size: 0.8rem; margin-top: 4px;">Введіть коректний номер телефону</div>
+              </div>
+              <div class="col-12">
+                <input type="text" class="form-control-dark w-100 p-2 rounded" id="clientAddress" placeholder="Адреса доставки (Вулиця, будинок, квартира)">
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <div class="modal-footer cart-modal-footer">
+        <div class="cart-total">Разом: <span id="cartTotal">0</span> грн</div>
+        <button class="btn btn-flame w-100 mt-3" id="checkoutBtn" disabled>Оформити замовлення</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="orderToast" class="toast custom-toast" role="alert">
+    <div class="toast-body">
+      ✅ Замовлення прийнято! Очікуйте дзвінка протягом 5 хвилин.
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-4">
+        <div class="footer-brand">🔥 La Fiamma</div>
+        <p class="footer-desc">Автентична неаполітанська піца у серці Львова.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5 class="footer-heading">Навігація</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h5 class="footer-heading">Години роботи</h5>
+        <p class="footer-hours">Пн–Чт: 11:00–22:00<br/>Пт–Нд: 11:00–23:00</p>
+      </div>
+      <div class="col-lg-3">
+        <h5 class="footer-heading">Контакти</h5>
+        <p class="footer-contact">📍 вул. Галицька 12, Львів<br/>📞 +38 (032) 250-00-00<br/>✉️ hello@lafiamma.ua</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 La Fiamma. Всі права захищені.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

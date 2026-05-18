@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Меню — La Fiamma</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand logo" href="index.html">🔥 La Fiamma</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+        <li class="nav-item"><a class="nav-link active" href="menu.html">Меню</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Контакти</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="nav-link btn-order" href="menu.html">Замовити</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-overlay"></div>
+  <div class="container text-center page-hero-content">
+    <p class="section-label">Що приготувати?</p>
+    <h1 class="page-hero-title">Наше меню</h1>
+    <p class="page-hero-sub">Кожна піца готується з любов'ю та в дровʼяній печі</p>
+  </div>
+</section>
+
+<section class="menu-section py-6">
+  <div class="container">
+
+    <div class="menu-filters d-flex flex-wrap justify-content-center gap-2 mb-5">
+      <button class="filter-btn active" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="classic">Класичні</button>
+      <button class="filter-btn" data-filter="special">Авторські</button>
+      <button class="filter-btn" data-filter="veg">Вегетаріанські</button>
+      <button class="filter-btn" data-filter="spicy">Гострі</button>
+    </div>
+
+    <div class="row g-4" id="menu-grid">
+      </div>
+  </div>
+</section>
+
+<div class="cart-widget" id="cartWidget">
+  <button class="cart-btn" id="cartToggle">
+    🛒 <span id="cartCount">0</span>
+  </button>
+</div>
+
+<div class="modal fade" id="cartModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content cart-modal-content">
+      <div class="modal-header cart-modal-header">
+        <h5 class="modal-title">🛒 Ваше замовлення</h5>
+        <button type="button" class="btn-close-custom" data-bs-dismiss="modal">✕</button>
+      </div>
+      <div class="modal-body">
+        
+        <div id="cartBody">
+          <p class="cart-empty">Кошик порожній</p>
+        </div>
+        
+        <div id="checkoutFormBlock" class="d-none mt-4 pt-4" style="border-top: 1px solid rgba(255,255,255,0.08);">
+          <h6 class="mb-3" style="color: var(--gold); font-family: 'Montserrat', sans-serif;">Дані для доставки:</h6>
+          <form id="checkoutForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control-dark w-100 p-2 rounded" id="clientName" placeholder="Ваше ім'я">
+              </div>
+              <div class="col-md-6 position-relative">
+                <input type="tel" class="form-control-dark w-100 p-2 rounded" id="clientPhone" placeholder="Телефон (обов'язково) *" required>
+                <div class="invalid-feedback d-none" id="phoneError" style="color: #ff6b6b; font-size: 0.8rem; margin-top: 4px;">Введіть коректний номер телефону</div>
+              </div>
+              <div class="col-12">
+                <input type="text" class="form-control-dark w-100 p-2 rounded" id="clientAddress" placeholder="Адреса доставки (Вулиця, будинок, квартира)">
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <div class="modal-footer cart-modal-footer">
+        <div class="cart-total">Разом: <span id="cartTotal">0</span> грн</div>
+        <button class="btn btn-flame w-100 mt-3" id="checkoutBtn" disabled>Оформити замовлення</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="orderToast" class="toast custom-toast" role="alert">
+    <div class="toast-body">
+      ✅ Замовлення прийнято! Очікуйте дзвінка протягом 5 хвилин.
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-4">
+        <div class="footer-brand">🔥 La Fiamma</div>
+        <p class="footer-desc">Автентична неаполітанська піца у серці Львова.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5 class="footer-heading">Навігація</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h5 class="footer-heading">Години роботи</h5>
+        <p class="footer-hours">Пн–Чт: 11:00–22:00<br/>Пт–Нд: 11:00–23:00</p>
+      </div>
+      <div class="col-lg-3">
+        <h5 class="footer-heading">Контакти</h5>
+        <p class="footer-contact">📍 вул. Галицька 12, Львів<br/>📞 +38 (032) 250-00-00<br/>✉️ hello@lafiamma.ua</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 La Fiamma. Всі права захищені.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
